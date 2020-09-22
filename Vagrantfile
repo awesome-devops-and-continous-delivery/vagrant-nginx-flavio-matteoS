@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
      vb.gui = false
   #
   #   # Customize the amount of memory on the VM:
-     vb.memory = "4096"
+     vb.memory = "8192"
    end
   #
   # View the documentation for the provider you are using for more
@@ -66,6 +66,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
      sudo apt-get update
      sudo apt-get install nginx -y
-     sudo nginx -g daemon off
    SHELL
 end
